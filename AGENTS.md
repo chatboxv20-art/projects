@@ -61,6 +61,12 @@ Regenerate with: `cd fcai-study-plan/.build && python3 run_build.py && python3 v
 ## Conventions / gotchas
 - Teaching weeks are `[1,2,3,4,5,6,9,10,11,12,13,14]`; week 7 = review,
   week 8 = midterm, weeks 15–16 = review. Topic index = `TEACH_WEEKS.index(week)`.
+- Exam MCQ answer keys in `generator_exams.py` are shuffled with
+  `random.Random(f"{code}:{q_index}")` so the correct option varies by question
+  and stays deterministic across rebuilds; `validate.py` checks the key letters
+  vary and point at the correct option, and flags the Arabic typo `نطام`.
+- Arabic prose must use `نظام`, never `نطام` (a typo that once appeared 1280×
+  across the weekly lessons).
 - Adding a course requires: entry in `curriculum_data.py`, 12 topics in `topics*.py`,
   a `course_domain.py` mapping, and (if a new domain) a bundle in `domains_*.py`
   plus terms in `terms.py`.
