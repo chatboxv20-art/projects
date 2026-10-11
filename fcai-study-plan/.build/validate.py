@@ -50,12 +50,39 @@ for f in ["README.md", "00-overview/degree-map.md", "00-overview/style-guide-ar.
     if not os.path.exists(p):
         problems.append(f"MISSING {p}")
 
-# 4. no placeholder links
+# 4. no placeholder links and no known typos
 for p in glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True):
     t = open(p, encoding="utf-8").read()
     for bad in ["TODO", "PLACEHOLDER", "[UNVERIFIED", "example.com", "http://example"]:
         if bad in t:
             problems.append(f"{p}: contains {bad}")
+    if "نطام" in t:
+        problems.append(f"{p}: typo نطام (should be نظام)")
+
+# 4b. MCQ answer keys: varied letters and aligned with the exam options
+OPT = ["أ", "ب", "ج", "د"]
+for sem in range(1, 9):
+    for kind in ("midterm", "final"):
+        ep = os.path.join(ROOT, f"semester-{sem}", "exams", f"{kind}-exam.md")
+        ap = os.path.join(ROOT, f"semester-{sem}", "exams", f"{kind}-answers.md")
+        if not (os.path.exists(ep) and os.path.exists(ap)):
+            continue
+        ex = open(ep, encoding="utf-8").read()
+        an = open(ap, encoding="utf-8").read()
+        key = {m.group(1): m.group(2)
+               for m in re.finditer(r"\*\*(\d+)\.\*\* الإجابة \*\*([أبجد])\*\*", an)}
+        letters = set(key.values())
+        if len(letters) < 2:
+            problems.append(f"{ap}: MCQ answers not varied (all {letters})")
+        blocks = re.split(r"\n\*\*(\d+)\.\*\* ", ex)
+        for i in range(1, len(blocks), 2):
+            num, body = blocks[i], blocks[i + 1]
+            opts = re.findall(r"- ([أبجد])\) (.+)", body)
+            if len(opts) != 4:
+                continue
+            chosen = [txt for lab, txt in opts if lab == key.get(num)]
+            if not chosen or "أداة شغّالة" not in chosen[0]:
+                problems.append(f"{ep}: answer key for Q{num} does not match options")
 
 # 5. count files
 allmd = glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True)

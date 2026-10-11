@@ -1,10 +1,46 @@
 # -*- coding: utf-8 -*-
 """Exam papers and model answers for each semester."""
-import os, sys
+import os, sys, random
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import curriculum_data as CD
 import generator as G
 from generator_build import w, courses, ORD_AR, TOPICS, AR_LABEL, TEACH_WEEKS
+
+OPT_LABELS = ["أ", "ب", "ج", "د"]
+
+
+def _mcq(code, q_index, d, t_ar):
+    """Deterministic MCQ: shuffle options so the correct answer varies by question."""
+    correct = f"أداة شغّالة جوه {d['name_ar']} بتدعم قرارات حقيقية"
+    opts = [
+        correct,
+        "تعريف شكلي بدون تطبيق عملي",
+        "مفهوم نظري مالوش استخدام مباشر",
+        "موضوع من مجال دراسي آخر تمامًا",
+    ]
+    rnd = random.Random(f"{code}:{q_index}")
+    rnd.shuffle(opts)
+    return opts, opts.index(correct)
+
+
+def _mcq_question(n, code, ar, t_ar, d, q_index):
+    opts, _ = _mcq(code, q_index, d, t_ar)
+    o = [f"**{n}.** إيه أنسب وصف لدور **{t_ar}** في مقرر **{ar}**؟ _(مقرر {code})_\n"]
+    for i, text in enumerate(opts):
+        o.append(f"   - {OPT_LABELS[i]}) {text}")
+    o.append("")
+    return "\n".join(o)
+
+
+def _mcq_answer(n, code, t_ar, d, q_index):
+    opts, ci = _mcq(code, q_index, d, t_ar)
+    correct = opts[ci]
+    o = [f"**{n}.** الإجابة **{OPT_LABELS[ci]}** _(مقرر {code})_\n"]
+    o.append(f"دور {t_ar} مرتبط مباشرة بأنه {correct}، لأن {d['name_ar']} "
+             f"بتستخدمه فعلًا وقت القرار مش كتعريف شكلي. "
+             f"الاختيارات التانية بتوصّفه كإنه نظري بلا استخدام أو من مجال تاني، "
+             f"وده يخالف بلوك التعريف وبلوك الاستخدام في الدرس.\n")
+    return "\n".join(o)
 
 
 def midterm_exam(sem):
@@ -13,7 +49,7 @@ def midterm_exam(sem):
     o = [f"# امتحان الفصل الأول (الميدتيرم) — الفصل {sem}\n"]
     o.append(f"- **المقررات الممتحَنة:** {codes}")
     o.append("- **المدة:** ساعتان لكل مقرر")
-    o.append("- **المجموع:** 40 درجة لكل مقرر (الوزن 20% من نتيجة المقرر)")
+    o.append("- **المجموع:** 84 درجة للورقة (الوزن 20% من نتيجة كل مقرر)")
     o.append("- **النطاق:** الأسابيع 1 إلى 7")
     o.append("- **الكتاب:** مغلق (يُسمح بآلة حاسبة علمية غير قابلة للبرمجة)")
     o.append("- **التعليمات:** اقرا السؤال كاملًا قبل البدء، واكتب الخطوات، ولا تترك سؤالًا "
@@ -25,13 +61,10 @@ def midterm_exam(sem):
     for c in cs:
         code, en, ar, ch, split, pre = c
         d = G.domain_of(code)
-        for t_en, t_ar in TOPICS[code][:2]:
+        for j, (t_en, t_ar) in enumerate(TOPICS[code][:2]):
             n += 1
-            o.append(f"**{n}.** إيه أنسب وصف لدور **{t_ar}** في مقرر **{ar}**؟ _(مقرر {code})_\n")
-            o.append(f"   - أ) أداة شغّالة جوه {d['name_ar']} بتدعم قرارات حقيقية")
-            o.append("   - ب) تعريف شكلي بدون تطبيق عملي")
-            o.append("   - ج) مفهوم نظري مالوش استخدام مباشر")
-            o.append("   - د) موضوع من مجال دراسي آخر تمامًا\n")
+            o.append(_mcq_question(n, code, ar, t_ar, d, j))
+    o.append("**مجموع القسم: 24 درجة**\n")
     o.append("---\n")
     o.append("## القسم الثاني: أسئلة قصيرة\n")
     o.append("**أجب بإيجاز ودقة.**\n")
@@ -76,12 +109,9 @@ def midterm_answers(sem):
     for c in cs:
         code, en, ar, ch, split, pre = c
         d = G.domain_of(code)
-        for t_en, t_ar in TOPICS[code][:2]:
+        for j, (t_en, t_ar) in enumerate(TOPICS[code][:2]):
             n += 1
-            o.append(f"**{n}.** الإجابة **أ** _(مقرر {code})_\n")
-            o.append(f"دور {t_ar} مرتبط مباشرة بأنه أداة شغّالة جوه {d['name_ar']} بتدعم قرارات حقيقية. "
-                     f"الاختيار الصحيح بيوصّف الوظيفة الحقيقية للموضوع، أما باقي الاختيارات فبتوصّفه "
-                     f"كإنه شكلي أو نظري بلا استخدام أو من مجال آخر، وده يخالف بلوك التعريف وبلوك الاستخدام في الدرس.\n")
+            o.append(_mcq_answer(n, code, t_ar, d, j))
     o.append("---\n")
     o.append("## القسم الثاني: إجابات الأسئلة القصيرة\n")
     n = 0
@@ -91,8 +121,8 @@ def midterm_answers(sem):
         t_en, t_ar = TOPICS[code][2]
         n += 1
         o.append(f"**{n}.** الفكرة الأساسية لـ{t_ar} إنه {d['what_ar']} "
-                 f"والميزة إنه {d['adv_ar'][0]}، والحد إنه {d['lim_ar'][0]}. "
-                 f"والإجابة الكاملة لازم تشمل الفكرة والميزة والحد مع سبب كل واحدة.\n")
+                 f"وأهم ميزة إنه {d['adv_ar'][0]}، وأهم حد إنه {d['lim_ar'][0]}. "
+                 f"والإجابة الكاملة لازم تشمل الفكرة والميزة والحد، كل واحدة بسببه.\n")
     o.append("---\n")
     o.append("## القسم الثالث: الحل النموذجي للمسائل\n")
     n = 0
@@ -101,8 +131,9 @@ def midterm_answers(sem):
         d = G.domain_of(code)
         t_en, t_ar = TOPICS[code][3]
         n += 1
-        o.append(f"**{n}.** الحل لازم يغطي أربع خطوات: أولًا وصف الموقف بدقة، ثانيًا تحليل الوضع "
-                 f"بأرقام أو حقائق، ثالثًا توصية مبنية على التحليل، ورابعًا خطر واحد على الأقل مع خطة لمراقبته.\n")
+        o.append(f"**{n}.** الحل لازم يغطي أربع خطوات مترابطة: أولًا وصف الموقف في {t_ar} بدقة، "
+                 f"ثانيًا تحليل الوضع بأرقام أو حقائق من {d['name_ar']}، "
+                 f"ثالثًا توصية مبنية على التحليل، ورابعًا خطر واحد على الأقل مع خطة لمراقبته.\n")
     o.append("---\n")
     o.append("## قواعد التصحيح\n")
     o.append("- **الاختيار من متعدد:** الدرجة كاملة للإجابة الصحيحة فقط، مافيش درجة جزئية.")
@@ -118,7 +149,7 @@ def final_exam(sem):
     o = [f"# امتحان آخر الفصل (الفاينل) — الفصل {sem}\n"]
     o.append(f"- **المقررات الممتحَنة:** {codes}")
     o.append("- **المدة:** ثلاث ساعات لكل مقرر")
-    o.append("- **المجموع:** 100 درجة لكل مقرر (الوزن 50% من نتيجة المقرر)")
+    o.append("- **المجموع:** 96 درجة للورقة (الوزن 50% من نتيجة كل مقرر)")
     o.append("- **النطاق:** الأسابيع 1 إلى 16، مع تركيز أكبر على الأسابيع 9 إلى 16")
     o.append("- **الكتاب:** مغلق (يُسمح بآلة حاسبة علمية غير قابلة للبرمجة)")
     o.append("- **التعليمات:** اقرا السؤال كاملًا، واكتب الخطوات، وبرّر كل إجابة.\n")
@@ -129,14 +160,11 @@ def final_exam(sem):
     for c in cs:
         code, en, ar, ch, split, pre = c
         d = G.domain_of(code)
-        for wi in (9, 11):
+        for j, wi in enumerate((9, 11)):
             t_en, t_ar = TOPICS[code][TEACH_WEEKS.index(wi)]
             n += 1
-            o.append(f"**{n}.** إيه أنسب وصف لدور **{t_ar}** في مقرر **{ar}**؟ _(مقرر {code})_\n")
-            o.append(f"   - أ) أداة شغّالة جوه {d['name_ar']} بتدعم قرارات حقيقية")
-            o.append("   - ب) تعريف شكلي بدون تطبيق عملي")
-            o.append("   - ج) مفهوم نظري مالوش استخدام مباشر")
-            o.append("   - د) موضوع من مجال دراسي آخر تمامًا\n")
+            o.append(_mcq_question(n, code, ar, t_ar, d, 100 + j))
+    o.append("**مجموع القسم: 24 درجة**\n")
     o.append("---\n")
     o.append("## القسم الثاني: أسئلة قصيرة\n")
     o.append("**أجب بإيجاز ودقة.**\n")
@@ -180,13 +208,10 @@ def final_answers(sem):
     for c in cs:
         code, en, ar, ch, split, pre = c
         d = G.domain_of(code)
-        for wi in (9, 11):
+        for j, wi in enumerate((9, 11)):
             t_en, t_ar = TOPICS[code][TEACH_WEEKS.index(wi)]
             n += 1
-            o.append(f"**{n}.** الإجابة **أ** _(مقرر {code})_\n")
-            o.append(f"دور {t_ar} مرتبط مباشرة بأنه أداة شغّالة جوه {d['name_ar']}. "
-                     f"الاختيار الصحيح بيوصّف الوظيفة الحقيقية للموضوع، أما باقي الاختيارات فبتوصّفه "
-                     f"كإنه شكلي أو نظري بلا استخدام أو من مجال آخر.\n")
+            o.append(_mcq_answer(n, code, t_ar, d, 100 + j))
     o.append("---\n")
     o.append("## القسم الثاني: إجابات الأسئلة القصيرة\n")
     n = 0
@@ -205,8 +230,9 @@ def final_answers(sem):
         d = G.domain_of(code)
         t_en, t_ar = TOPICS[code][11]
         n += 1
-        o.append(f"**{n}.** الحل لازم يشمل: وصف الموقف، والتحليل بالأرقام، والقرار الموصى بيه، "
-                 f"وبديل واحد على الأقل مع سبب استبعاده. درجات كل خطوة محسوبة منفصلة.\n")
+        o.append(f"**{n}.** الحل لازم يشمل: وصف الموقف في {t_ar}، والتحليل بالأرقام من "
+                 f"{d['name_ar']}، والقرار الموصى بيه، وبديل واحد على الأقل مع سبب استبعاده. "
+                 f"درجات كل خطوة محسوبة منفصلة.\n")
     o.append("---\n")
     o.append("## قواعد التصحيح\n")
     o.append("- **الاختيار من متعدد:** الدرجة كاملة للإجابة الصحيحة فقط، مافيش درجة جزئية.")

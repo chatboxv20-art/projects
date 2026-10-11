@@ -121,7 +121,7 @@ def topic_section(idx, t_en, t_ar, d):
         f"Take the example above and apply it to a small program or system you know. "
         f"Write down: (1) the situation in {t_en}, (2) the numbers or facts involved, "
         f"(3) the decision it supports, and (4) one risk you would watch.",
-        f"خد المثال اللي فوق وطبّقه على برنامج أو نطام صغير تعرفه. اكتب: (1) الموقف في {t_ar}، "
+        f"خد المثال اللي فوق وطبّقه على برنامج أو نظام صغير تعرفه. اكتب: (1) الموقف في {t_ar}، "
         f"(2) الأرقام أو الحقائق المعنية، (3) القرار اللي بيدعمه، (4) خطر واحد تراقبه."))
 
     # Practice questions
@@ -159,7 +159,7 @@ def topic_section(idx, t_en, t_ar, d):
     o.append(bi(
         f"Write half a page applying {t_en} to a real program or system you choose. "
         f"Include the situation, the analysis and your recommendation.",
-        f"اكتب نص صفحة بتطبّق فيها {t_ar} على برنامج أو نطام حقيقي تختاره. "
+        f"اكتب نص صفحة بتطبّق فيها {t_ar} على برنامج أو نظام حقيقي تختاره. "
         f"ضمّن الموقف والتحليل والتوصية بتاعتك."))
 
     # Revision notes
@@ -244,7 +244,7 @@ def end_of_lesson(sem, week, courses):
          "الإجابات بتعتمد على شغلك؛ راجع كل واحدة مقابل تعريف الموضوع واستخدامه وحدوده."),
         ("Practice Exercise", "تمرين عملي",
          "Pick one topic from this week and apply it fully to a real system: situation, analysis and recommendation.",
-         "اختار موضوع واحد من الأسبوع ده وطبّقه كامل على نطام حقيقي: الموقف والتحليل والتوصية."),
+         "اختار موضوع واحد من الأسبوع ده وطبّقه كامل على نظام حقيقي: الموقف والتحليل والتوصية."),
         ("Homework", "الواجب",
          "For each course this week, write three lines: what the topic is, where it is used, and one mistake to avoid.",
          "لكل مقرر الأسبوع ده، اكتب ثلاث سطور: الموضوع إيه، وبنستخدمه فين، وخطأ واحد تتجنبه."),

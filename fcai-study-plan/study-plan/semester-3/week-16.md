@@ -118,7 +118,7 @@ Pick one topic from this week and apply it fully to a real system: situation, an
 
 **Egyptian Arabic (اللهجة المصرية):**
 
-اختار موضوع واحد من الأسبوع ده وطبّقه كامل على نطام حقيقي: الموقف والتحليل والتوصية.
+اختار موضوع واحد من الأسبوع ده وطبّقه كامل على نظام حقيقي: الموقف والتحليل والتوصية.
 
 ### Homework (الواجب)
 
