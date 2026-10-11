@@ -1,7 +1,7 @@
 # AGENTS.md — repository knowledge
 
 ## What this repo is
-Two parallel, self-contained Markdown study-guide projects for Cairo University
+Three parallel, self-contained Markdown study-guide projects for Cairo University
 programs (4 years / 8 semesters), each mirroring a real faculty curriculum with
 16 teaching weeks per semester, midterm (week 8) + final exam papers with model answers:
 
@@ -12,8 +12,13 @@ programs (4 years / 8 semesters), each mirroring a real faculty curriculum with
   (complete English block then complete Egyptian-Arabic block), following the
   format contract in `prompt.md` (repo-root `prompt.md`, also at
   `/home/openhands/workspace/project/prompt.md`).
+- `fcai-study-plan/` — Computer Science track, Faculty of Computers and Artificial
+  Intelligence (FCAI), Cairo University. Content is **fully bilingual** in the same
+  `prompt.md` format. 8 semesters / 48 courses / **136 credit hours** (17 CH each),
+  mirroring the real FCAI credit-hour system (135–138 CH) with courses such as
+  CS111, CS112, CS113, CS114, CS211, CS213, AI201, AI301.
 
-## Prompt.md format contract (business-study-plan)
+## Prompt.md format contract (business-study-plan and fcai-study-plan)
 Every lesson section must be a *full bilingual block*: the whole English section
 first, then `**Egyptian Arabic (اللهجة المصرية):**` and the whole same section in
 natural Egyptian colloquial Arabic (عامية مصرية, not فصحى). Never mix languages
@@ -42,6 +47,16 @@ It is generated, not hand-written. Everything lives in `business-study-plan/.bui
   resource triads, missing files, placeholder links). Must report 0 problems.
 
 Regenerate with: `cd business-study-plan/.build && python3 run_build.py && python3 validate.py`
+
+## How fcai-study-plan is generated
+Same pipeline shape as `business-study-plan`, living in `fcai-study-plan/.build/`:
+`curriculum_data.py` (8 semesters / 48 courses / 136 CH), `topics.py` + `topics2.py`
+(12 teaching-week topics per course), `domains_a.py`/`domains_b.py`/`domains_c.py`
+(CS/AI domain bundles: programming, data structures, algorithms, OS, networks,
+databases, ML, deep learning, NLP, vision, RL, security, cloud, graphics, etc.),
+`course_domain.py`, `terms.py`, `generator.py`, `generator_build.py`,
+`generator_exams.py`, `generator_docs.py`, `run_build.py`, `validate.py`.
+Regenerate with: `cd fcai-study-plan/.build && python3 run_build.py && python3 validate.py`
 
 ## Conventions / gotchas
 - Teaching weeks are `[1,2,3,4,5,6,9,10,11,12,13,14]`; week 7 = review,
