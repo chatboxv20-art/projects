@@ -1,0 +1,178 @@
+# الأسبوع 15 — الفصل 7
+
+> أسبوع مراجعة. الدرس ده مراجعة شاملة لكل مقررات الفصل.
+
+---
+
+### What This Week Is For (الأسبوع ده ليه)
+
+This is a general revision week. You review the whole semester, rebuild your summary sheet, and work through full exam papers under time pressure.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+ده أسبوع مراجعة عامة. بتراجع الفصل كله، وتبني ورقة ملخصك من جديد، وتحل نماذج امتحانات كاملة تحت ضغط الوقت.
+
+### Courses and Topics to Review (المقررات والمواضيع اللي تراجعها)
+
+**MGT401 — الإدارة الاستراتيجية المتقدمة**
+Review: Advanced Strategy and Strategic Leadership; Scenario Planning and Strategic Foresight; Competitive Dynamics and Rivalry; Corporate Strategy and Portfolio Management; Strategic Alliances and Networks; Digital Transformation Strategy; Business Model Innovation; Global Strategy and Emerging Markets; Strategic Risk and Resilience; Sustainability and ESG Strategy; Executing Strategy Across the Organization; Strategy Case Analysis and Simulation.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+راجع: الاستراتيجية المتقدمة والقيادة الاستراتيجية؛ تخطيط السيناريوهات والاستشراف الاستراتيجي؛ الديناميكية التنافسية والمنافسة؛ استراتيجية الشركة وإدارة المحفظة؛ التحالفات والشبكات الاستراتيجية؛ استراتيجية التحول الرقمي؛ ابتكار نموذج الأعمال؛ الاستراتيجية العالمية والأسواق الناشئة؛ المخاطر الاستراتيجية والمرونة؛ استراتيجية الاستدامة والحوكمة البيئية والاجتماعية؛ تنفيذ الاستراتيجية عبر المنظمة؛ تحليل حالات ومحاكاة الاستراتيجية.
+
+**FIN401 — إدارة المخاطر**
+Review: Introduction to Risk Management; Risk Identification and Assessment; Risk Measurement: Probability and Impact; Enterprise Risk Management Frameworks; Credit Risk Management; Market Risk and Value at Risk; Operational Risk Management; Liquidity and Funding Risk; Derivatives as Risk Management Tools; Insurance and Risk Transfer; Business Continuity and Crisis Management; Regulatory Risk and Basel Accords.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+راجع: مقدمة في إدارة المخاطر؛ تحديد المخاطر وتقييمها؛ قياس المخاطر: الاحتمال والأثر؛ أطر إدارة المخاطر المؤسسية؛ إدارة مخاطر الائتمان؛ مخاطر السوق والقيمة المعرضة للخطر؛ إدارة المخاطر التشغيلية؛ مخاطر السيولة والتمويل؛ المشتقات كأدوات لإدارة المخاطر؛ التأمين ونقل المخاطر؛ استمرارية الأعمال وإدارة الأزمات؛ المخاطر التنظيمية واتفاقيات بازل.
+
+**MGT402 — إدارة المشروعات**
+Review: Introduction to Project Management; Project Life Cycle and Organization; Project Scope Management; Project Schedule Management; Project Cost Management; Project Quality Management; Project Resource and Team Management; Project Communication Management; Project Risk Management; Project Procurement Management; Project Stakeholder Management; Agile and Modern Project Approaches.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+راجع: مقدمة في إدارة المشروعات؛ دورة حياة المشروع والتنظيم؛ إدارة نطاق المشروع؛ إدارة الجدول الزمني للمشروع؛ إدارة تكاليف المشروع؛ إدارة جودة المشروع؛ إدارة موارد المشروع وفريقه؛ إدارة اتصالات المشروع؛ إدارة مخاطر المشروع؛ إدارة مشتريات المشروع؛ إدارة أصحاب المصلحة في المشروع؛ المنهجيات الرشيقة والحديثة لإدارة المشروعات.
+
+**BUS401 — أخلاقيات الأعمال وحوكمة الشركات**
+Review: Ethics and Business; Ethical Theories and Frameworks; Corporate Governance Fundamentals; Boards of Directors and Governance Structures; Agency Theory and Managerial Incentives; Corporate Social Responsibility; Sustainability and ESG Reporting; Whistleblowing and Ethical Culture; Governance in Family Businesses; Anti-Corruption and Compliance; Stakeholder Management and Ethics; Case Studies in Business Ethics.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+راجع: الأخلاقيات والأعمال؛ النظريات والأطر الأخلاقية؛ أساسيات حوكمة الشركات؛ مجالس الإدارة وهياكل الحوكمة؛ نظرية الوكالة وحوافز المديرين؛ المسؤولية الاجتماعية للشركات؛ الاستدامة وتقارير الحوكمة البيئية والاجتماعية؛ الإبلاغ عن المخالفات والثقافة الأخلاقية؛ الحوكمة في الشركات العائلية؛ مكافحة الفساد والالتزام؛ إدارة أصحاب المصلحة والأخلاقيات؛ حالات دراسية في أخلاقيات الأعمال.
+
+**BUS402 — مشروع التخرج 1**
+Review: Graduation Project Orientation; Choosing a Research Topic; Literature Review; Problem Statement and Objectives; Research Design and Methodology; Data Collection Planning; Project Planning and Timeline; Working with a Supervisor; Academic Writing and Referencing; Preliminary Data Analysis; Drafting the Proposal; Presenting the Proposal.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+راجع: توجيه مشروع التخرج؛ اختيار موضوع البحث؛ مراجعة الأدبيات؛ تحديد المشكلة والأهداف؛ تصميم البحث والمنهجية؛ تخطيط جمع البيانات؛ تخطيط المشروع والجدول الزمني؛ العمل مع المشرف؛ الكتابة الأكاديمية والتوثيق؛ التحليل الأولي للبيانات؛ صياغة المقترح؛ عرض المقترح.
+
+**ELEC-PRO — اختياري: إدارة المشروعات الاحترافية**
+Review: Project Management Foundations and PMBOK; Project Integration Management; Scope and Requirements Management; Schedule Management and Critical Path; Cost Management and Earned Value; Quality Management in Projects; Resource and Procurement Management; Communications and Stakeholder Management; Risk Management in Projects; Agile, Scrum and Hybrid Approaches; Project Leadership and Teams; PMI Code of Ethics and Professional Conduct.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+راجع: أساسيات إدارة المشروعات وPMBOK؛ إدارة تكامل المشروع؛ إدارة النطاق والمتطلبات؛ إدارة الجدول الزمني والمسار الحرج؛ إدارة التكاليف والقيمة المكتسبة؛ إدارة الجودة في المشروعات؛ إدارة الموارد والمشتريات؛ إدارة الاتصالات وأصحاب المصلحة؛ إدارة المخاطر في المشروعات؛ المنهجيات الرشيقة وسكرم والهجينة؛ قيادة المشروعات والفرق؛ مدونة الأخلاقيات والسلوك المهني لـPMI.
+
+## End of Lesson (نهاية الدرس)
+
+### Lesson Summary (ملخص الدرس)
+
+This week covered the following topics across the semester's courses: review of all semester courses. Each topic opened with a bilingual definition, then explained what it is, why it exists, why it matters, where it is used, its advantages and limits, best practices and common mistakes, followed by a practical example and exercises.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+الأسبوع ده غطّى المواضيع دي في مقررات الفصل: مراجعة كل مقررات الفصل. كل موضوع بدأ بتعريف ثنائي اللغة، وبعدين شرح يعني إيه وليه موجود وليه مهم وبنستخدمه فين، ومميزاته وحدوده وأحسن الممارسات والأخطاء الشائعة، وبعدين مثال عملي وتمارين.
+
+### Key Takeaways (أهم النقط)
+
+- Every topic is a working tool, not a formality.
+- Definitions must be recallable from memory.
+- Advantages and limitations always come together.
+- A practical example fixes the idea in your mind.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+- كل موضوع أداة شغّالة مش شكلية.
+- التعريفات لازم تقدر تسترجعها من دماغك.
+- المميزات والحدود بتيجي مع بعض دايمًا.
+- المثال العملي بيثبّت الفكرة في دماغك.
+
+### Common Mistakes (الأخطاء الشائعة)
+
+- Memorizing definitions without understanding use.
+- Ignoring limitations when applying a tool.
+- Skipping the practice questions and going straight to the exam.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+- حفظ التعريفات من غير فهم الاستخدام.
+- تجاهل الحدود وقت تطبيق الأداة.
+- تخطي أسئلة التدريب والذهاب للامتحان على طول.
+
+### Quiz (الاختبار)
+
+1. Which topic this week was hardest, and why?
+2. Give one real decision each topic supports.
+3. State one limitation for each topic.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+1. أنهي موضوع الأسبوع ده كان أصعب، وليه؟
+2. ادي قرار حقيقي واحد كل موضوع بيدعمه.
+3. اذكر حد واحد لكل موضوع.
+
+### Quiz Answers (إجابات الاختبار)
+
+Answers depend on your own work; check each against the topic's definition, use and limitations.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+الإجابات بتعتمد على شغلك؛ راجع كل واحدة مقابل تعريف الموضوع واستخدامه وحدوده.
+
+### Practice Exercise (تمرين عملي)
+
+Pick one topic from this week and apply it fully to a real business: situation, analysis and recommendation.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+اختار موضوع واحد من الأسبوع ده وطبّقه كامل على شركة حقيقية: الموقف والتحليل والتوصية.
+
+### Homework (الواجب)
+
+For each course this week, write three lines: what the topic is, where it is used, and one mistake to avoid.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+لكل مقرر الأسبوع ده، اكتب ثلاث سطور: الموضوع إيه، وبنستخدمه فين، وخطأ واحد تتجنبه.
+
+### Recommended Revision (المراجعة الموصى بيها)
+
+1. Re-read every definition block.
+2. Redo the quizzes without looking.
+3. Review the practical examples and cover the solution.
+4. Note anything still unclear for your instructor.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+1. اقرا كل بلوكات التعريف تاني.
+2. اعمل الاختبارات تاني من غير ما تبص.
+3. راجع الأمثلة العملية وغطّي الحل.
+4. سجّل أي حاجة لسه مش واضحة لمدرّسك.
+
+### Preview of the Next Lesson (نظرة على الدرس الجاي)
+
+Next week is the final revision and exam preparation week.
+
+**Egyptian Arabic (اللهجة المصرية):**
+
+الأسبوع الجاي مراجعة نهائية واستعداد للامتحانات.
+
+### Important Terms (مصطلحات مهمة)
+
+#### Competitive Advantage (الميزة التنافسية)
+English Definition: Something that lets a firm outperform rivals.
+Egyptian Arabic Definition: حاجة بتخلي الشركة تتفوق على المنافسين.
+
+#### Core Competency (الكفاءة الجوهرية)
+English Definition: A distinctive capability central to the firm's success.
+Egyptian Arabic Definition: قدرة مميزة أساسية لنجاح الشركة.
+
+#### Diversification (التنويع)
+English Definition: Expanding into new products or markets.
+Egyptian Arabic Definition: التوسع لمنتجات أو أسواق جديدة.
+
+#### SWOT (تحليل SWOT)
+English Definition: An analysis of strengths, weaknesses, opportunities and threats.
+Egyptian Arabic Definition: تحليل نقاط القوة والضعف والفرص والتهديدات.
+
+#### Vision (الرؤية)
+English Definition: The desired future state of the organization.
+Egyptian Arabic Definition: الحالة المستقبلية المرغوبة للمنظمة.
+
+
+---
+
+[الدرس السابق: week-14.md](week-14.md) · [رجوع لفصل 7](README.md) · [الدرس الجاي: week-16.md](week-16.md)
