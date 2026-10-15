@@ -1,0 +1,65 @@
+Code,Course,Credit_Hours,Category,Track,Prerequisite,Semester
+GEN 101,Arabic Language,2,University,,,1
+GEN 102,English for Business,3,University,,,1
+GEN 103,Islamic Culture,2,University,,,1
+GEN 104,Computer & Information Technology,2,University,,,1
+GEN 105,Community Issues (قضايا مجتمعية),2,University,,,2
+GEN 106,Human Rights & Combating Corruption,2,University,,,3
+GEN 108,Business Negotiation & Presentation Skills,2,University,,,7
+ACC 101,Principles of Accounting I,3,Faculty core,,—,1
+ACC 102,Principles of Accounting II,3,Faculty core,,ACC 101,2
+ACC 201,Financial Accounting,3,Faculty core,,ACC 102,3
+ECO 101,Principles of Economics I (Micro),3,Faculty core,,—,1
+ECO 102,Principles of Economics II (Macro),3,Faculty core,,ECO 101,2
+ECO 201,Microeconomics (Intermediate),3,Faculty core,,ECO 102,3
+ECO 202,Macroeconomics (Intermediate),3,Faculty core,,ECO 201,4
+ECO 203,Money & Banking,3,Faculty core,,ECO 102,4
+MTH 101,Business Mathematics,3,Faculty core,,—,2
+STA 101,Business Statistics I,3,Faculty core,,—,2
+STA 201,Business Statistics II,3,Faculty core,,STA 101,3
+LAW 101,Business Law,3,Faculty core,,—,2
+MGT 101,Principles of Management,3,Major,,—,1
+MGT 201,Organizational Behaviour,3,Major,,MGT 101,3
+MGT 202,Human Resource Management,3,Major,,MGT 201,4
+MGT 301,Production & Operations Management,3,Major,,MGT 201,5
+MGT 302,Organizational Theory & Design,3,Major,,MGT 201,5
+MGT 303,Operations Research,3,Major,,"MTH 101, STA 201",6
+MGT 401,Strategic Management,3,Major,,"MGT 302, MKT 201, FIN 201",7
+MGT 402,Change Management & Innovation,3,Major,,MGT 302,7
+MGT 403,Total Quality Management,3,Major,,MGT 301,7
+MKT 201,Principles of Marketing,3,Major,,MGT 101,3
+FIN 201,Financial Management,3,Major,,"ACC 201, MTH 101",4
+ACC 202,Cost Accounting,3,Major,,ACC 201,4
+ACC 301,Managerial Accounting,3,Major,,ACC 202,5
+MIS 201,Management Information Systems,3,Major,,GEN 104,4
+BUS 201,Business Communication,3,Major,,GEN 102,3
+BUS 301,Business Research Methods,3,Major,,STA 201,5
+BUS 302,International Business,3,Major,,ECO 202,6
+BUS 303,Business Ethics & Corporate Governance,3,Major,,MGT 101,6
+BUS 304,Entrepreneurship & Small Business,3,Major,,"MGT 201, FIN 201",6
+BUS 305,Business Analytics & Data-Driven Decisions,3,Major,,"MIS 201, STA 201",6
+BUS 401,Graduation Project I,3,Major,,BUS 301,7
+BUS 402,Graduation Project II,3,Major,,BUS 401,8
+BUS 403,Contemporary Issues in Business (Seminar),3,Major,,Level 4 standing,8
+ECO 301,Managerial Economics,3,Major,,ECO 202,5
+FIN 301,Corporate Finance,3,Elective,Finance & Investment,,
+FIN 302,Investment Analysis & Portfolio Management,3,Elective,Finance & Investment,,
+FIN 303,International Finance,3,Elective,Finance & Investment,,
+FIN 304,Financial Institutions & Markets,3,Elective,Finance & Investment,,
+FIN 305,Risk Management & Insurance,3,Elective,Finance & Investment,,
+FIN 306,Financial Statement Analysis,3,Elective,Finance & Investment,,
+FIN 307,Islamic Finance,3,Elective,Finance & Investment,,
+MKT 301,Consumer Behaviour,3,Elective,Marketing,,
+MKT 302,Marketing Research,3,Elective,Marketing,,
+MKT 303,Digital Marketing,3,Elective,Marketing,,
+MKT 304,Brand Management,3,Elective,Marketing,,
+MKT 305,Sales Management,3,Elective,Marketing,,
+MKT 306,International Marketing,3,Elective,Marketing,,
+MKT 307,Services Marketing,3,Elective,Marketing,,
+PRD 301,Supply Chain Management,3,Elective,Production & Industrial Management,,
+PRD 302,Project Management,3,Elective,Production & Industrial Management,,
+PRD 303,Quality Management Systems,3,Elective,Production & Industrial Management,,
+PRD 304,Logistics & Distribution,3,Elective,Production & Industrial Management,,
+PRD 305,Production Planning & Control,3,Elective,Production & Industrial Management,,
+PRD 306,Lean & Six Sigma,3,Elective,Production & Industrial Management,,
+PRD 307,Operations Strategy,3,Elective,Production & Industrial Management,,
